@@ -59,6 +59,7 @@ RUN \
   chmod +x prqt.app && \
   ./prqt.app --appimage-extract && \
   mv squashfs-root /opt/protonup-qt && \
+  find /opt/protonup-qt -type d -exec chmod 755 {} + && \
   echo "**** copy fake udev libs ****" && \
   cp \
     /opt/lib/* \
